@@ -9,3 +9,5 @@ scikit-learn
 imbalanced-learn
 imblearn
 plotly
+bcrypt
+streamlit-option-menu

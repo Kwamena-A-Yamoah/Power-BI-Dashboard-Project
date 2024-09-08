@@ -4,6 +4,22 @@ st.set_page_config(
     page_title="Business Intelligence Solution"
 )
 
+# Add custom CSS for background image
+page_bg_img = '''
+<style>
+.stApp {
+    background-image: url("https://images.pexels.com/photos/185576/pexels-photo-185576.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+</style>
+'''
+
+# Display the background image
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
 st.title("Business Intelligence Dashboard")
 st.markdown("""
             This app is designed to provide a comprehensive analysis of transactional data 
