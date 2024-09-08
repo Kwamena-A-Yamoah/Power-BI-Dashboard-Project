@@ -1,0 +1,11 @@
+pyodbc
+python-dotenv
+pandas
+numpy
+seaborn
+streamlit
+joblib
+scikit-learn
+imbalanced-learn
+imblearn
+plotly
