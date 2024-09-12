@@ -14,15 +14,15 @@ credentials = {
     "usernames": {
         "kwamena": {
             "name": "Kwamena Afful Yamoah",
-            "password": hash_password("kwamena123").decode('utf-8')  # Hashed password
+            "password": hash_password("123").decode('utf-8')  # Hashed password
         },
         "brian": {
             "name": "Brian Siaw",
-            "password": hash_password("brian123").decode('utf-8')
+            "password": hash_password("123").decode('utf-8')
         },
         "byanca": {
             "name": "Saskia Byanca Njoki",
-            "password": hash_password("byanca123").decode('utf-8')
+            "password": hash_password("123").decode('utf-8')
         }
     }
 }
