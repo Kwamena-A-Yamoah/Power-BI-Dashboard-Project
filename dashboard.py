@@ -7,7 +7,7 @@ def load_data():
     # Cache the data loading function
     @st.cache_data(persist=True)
     def get_data():
-        df = pd.read_csv(r'C:\Users\Pc\Desktop\Data analysis\Azubi Africa\Career Accelerator\Capstone\Power-BI-Dashboard-Project\Data\Cleaned data\cleaned_data.csv')
+        df = pd.read_csv(r'Data\Cleaned data\cleaned_data.csv')
         df = df.drop('Unnamed: 0', axis= 1, errors= ' ignore')
         return df
     return get_data()
