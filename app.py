@@ -1,6 +1,6 @@
 import streamlit as st
 import login            # Import the login module
-import data, home, dashboard
+import data, home, dashboard, team
 from streamlit_option_menu import option_menu
 
 
@@ -27,32 +27,17 @@ def main():
         st.sidebar.title(f"Welcome, {st.session_state['username'].title()}")
         if st.sidebar.button('Logout'):
             logout()
-       
-       # ================================================================= 
-        # Navigation menu
-        # st.sidebar.title('Navigation')
-        # st.session_state.page = st.sidebar.radio('Select Page', ['Home', 'Dashboard', 'Contacts'])
-
-        # # Render the selected page
-        # if st.session_state.page == 'Home':
-        #     st.title('Home')
-        #     st.write('Welcome to the home page!')
-        # elif st.session_state.page == 'Dashboard':
-        #     st.title('Dashboard')
-        #     st.write('Welcome to the dashboard page!')
-        # elif st.session_state.page == 'Contacts':
-        #     st.title('Contacts')
-        #     st.write('Welcome to the contacts page!')
-      
+            
 # =================================================================  This next one has better style
+
         # Navigation menu
         with st.sidebar:
             
             selected = option_menu(
                 menu_title='Main Menu',  # No title for the sidebar menu
                 menu_icon="arrow",  # Optional icon for the menu
-                options=["Home", "Dashboard", "Data"],  # Pages
-                icons=["house", "bar-chart", "file-text"],  # Optional icons for each page
+                options=["Home", "Data", "Dashboard", "Team"],  # Pages
+                icons=["house", "file-text", "bar-chart"],  # Optional icons for each page
                 default_index=0,  # Home is selected by default
                 orientation= "vertical", 
             )
@@ -64,11 +49,14 @@ def main():
             home.show_homepage()
         elif selected == "Dashboard":
             st.title('Sales Dashboard')
-            st.write('Welcome to the dashboard page!')
+            #st.write('Welcome to the dashboard page!')
             dashboard.show_dashboard()
         elif selected == "Data":
             st.write('Welcome to the data page!')
             data.show_data()
+        elif selected == "Team":
+            team.meet_the_team()
+            
 # =================================================================
         
     else:

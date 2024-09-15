@@ -8,7 +8,7 @@ def show_homepage():
                 Leveraging advanced data analytics, we aim to answer key business questions and generate actionable insights.
     """)
 
-    st.subheader("Key Questions")
+    st.subheader("Visualizations")
     st.markdown("""
                 - **Total Revenue**: How much money did we make this year?
                 - **Sales Seasonality**: Can we identify any seasonality in the sales?
@@ -22,15 +22,10 @@ def show_homepage():
     st.subheader("Steps")
     st.markdown("""
                 - **Upload Data**: Load the 2019 transactional dataset into the app.
-                - **Data Processing**: The app processes and cleans the data to ensure consistency.
+                - **Data Additions**: You can view and add additional data.
                 - **Analysis**: The app provides insights on revenue, seasonality, product performance, and more.
                 - **Visualization**: Use interactive charts to explore sales trends and patterns.
                 """)
-
-    st.subheader("Product Categorization")
-    st.markdown("""
-                Products with unit prices above $99.99 are categorized as **High-Level Products**, while others are labeled as **Basic-Level Products**.
-    """)
 
     st.subheader("Benefits of the App")
     st.markdown("""

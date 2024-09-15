@@ -11,3 +11,4 @@ imblearn
 plotly
 bcrypt
 streamlit-option-menu
+Pillow
