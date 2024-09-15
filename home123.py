@@ -8,6 +8,7 @@ def show_homepage():
                 Leveraging advanced data analytics, we aim to answer key business questions and generate actionable insights.
     """)
 
+
     st.subheader("Visualizations")
     st.markdown("""
                 - **Total Revenue**: How much money did we make this year?

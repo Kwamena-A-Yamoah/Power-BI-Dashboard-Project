@@ -10,6 +10,7 @@ def load_data():
         return df
     return get_data()
 
+
 def show_data():
     st.title("View, Add & Download Data")
 

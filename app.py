@@ -1,6 +1,6 @@
 import streamlit as st
 import login            # Import the login module
-import data, home, dashboard, team
+import data, home123, dashboard, team123
 from streamlit_option_menu import option_menu
 
 
@@ -42,11 +42,12 @@ def main():
                 orientation= "vertical", 
             )
 
+
         # Render the selected page
         if selected == "Home":
             st.title('Home')
             st.write('Welcome to the home page!')
-            home.show_homepage()
+            home123.show_homepage()
         elif selected == "Dashboard":
             st.title('Sales Dashboard')
             #st.write('Welcome to the dashboard page!')
@@ -55,7 +56,7 @@ def main():
             st.write('Welcome to the data page!')
             data.show_data()
         elif selected == "Team":
-            team.meet_the_team()
+            team123.meet_the_team()
             
 # =================================================================
         

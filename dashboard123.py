@@ -16,6 +16,7 @@ def load_data():
 
 df = load_data()
 
+
 # Add a new column for total sales and price categor
 df['Total_Sales'] = df['Quantity_Ordered']*df['Price']
 df['price_category'] = np.where(df['Price'] > 99.99, 'High-Level Product', 'Basic Level Product')
