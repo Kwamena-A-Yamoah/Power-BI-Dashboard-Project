@@ -7,8 +7,8 @@ def load_data():
     # Cache the data loading function
     @st.cache_data(persist=True)
     def get_data():
-        df = pd.read_csv('Data\Cleaned data\cleaned_data.csv')
-        df = df.drop('Unnamed: 0', axis= 1, errors= ' ignore')
+        df = pd.read_csv('Data\Cleaned_data\cleaned_data.csv')
+        df = df.drop(['Unnamed: 0', 'Order_ID'], axis= 1, errors= ' ignore')
         return df
     return get_data()
 
@@ -154,7 +154,6 @@ def show_dashboard():
     
     # Sort the data by the Y-Axis column in descending order
     df_sorted = filtered_df.sort_values(by=y_axis1, ascending=False)
-
     fig = px.bar(df_sorted, x=x_axis1, y=y_axis1, title=f'{y_axis1} vs {x_axis1}')
         
     # Display the chart

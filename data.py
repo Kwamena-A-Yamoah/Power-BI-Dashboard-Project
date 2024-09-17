@@ -6,7 +6,7 @@ def load_data():
     # Cache the data loading function
     @st.cache_data(persist=True)
     def get_data():
-        df = pd.read_csv('Data\Cleaned data\cleaned_data.csv')
+        df = pd.read_csv('Data\Cleaned_data\cleaned_data.csv')
         return df
     return get_data()
 
