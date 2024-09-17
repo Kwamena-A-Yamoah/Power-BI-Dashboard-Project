@@ -7,7 +7,7 @@ def load_data():
     # Cache the data loading function
     @st.cache_data(persist=True)
     def get_data():
-        df = pd.read_csv('Data\Cleaned_data\cleaned_data.csv')
+        df = pd.read_csv('Data/Cleaned_data/cleaned_data.csv')
         df = df.drop(['Unnamed: 0', 'Order_ID'], axis= 1, errors= ' ignore')
         return df
     return get_data()
