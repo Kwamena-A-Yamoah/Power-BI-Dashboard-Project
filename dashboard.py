@@ -5,7 +5,7 @@ import plotly.express as px
 
 def load_data():
     # Cache the data loading function
-    @st.cache_data(persist=True)
+    @st.cache_data(persist=True, ttl=3600)
     def get_data():
         df = pd.read_csv('Data/Cleaned_data/cleaned_data.csv')
         df = df.drop(['Unnamed: 0', 'Order_ID'], axis= 1, errors= ' ignore')
